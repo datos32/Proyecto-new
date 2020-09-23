@@ -1,0 +1,6 @@
+{
+    "ApiPath": "http://localhost/",
+    "LimitConnect": 100,
+    "CheckFiltrer" : true,
+    "port": 80
+}
