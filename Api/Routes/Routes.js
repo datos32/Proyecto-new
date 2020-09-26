@@ -11,7 +11,7 @@ Routes.get("/",(req,res)=>
     res.status(500).json({work :"ad"});
 });
 
-Routes.post('api/login',(req,res)=>
+Routes.post('/api/login',(req,res)=>
 {
    let {correo,password} = req.body;
 
@@ -55,7 +55,7 @@ Routes.post('api/login',(req,res)=>
    
 });
 
-Routes.post('api/register',(req,res)=>
+Routes.post('/api/register',(req,res)=>
 {
    let {nombre,apellido,correo,password} = req.body;
 
@@ -75,7 +75,7 @@ Routes.post('api/register',(req,res)=>
 
 });
 
-Routes.post('api/create-notice',(req,res)=>
+Routes.post('/api/create-notice',(req,res)=>
 {
    let {tituloNoticia,
     categoria,
@@ -135,7 +135,7 @@ Routes.post('api/create-notice',(req,res)=>
     });
 });
 
-Routes.post('api/list-notice',(req,res)=>
+Routes.post('/api/list-notice',(req,res)=>
 {
     Noticias.find({},(error,date)=>
     {
@@ -144,7 +144,7 @@ Routes.post('api/list-notice',(req,res)=>
     });
 });
 
-Routes.post('api/notice/:id',(req,res)=>
+Routes.post('/api/notice/:id',(req,res)=>
 {
     Noticias.find({_id:req.params.id},(error,date)=>
     {
@@ -153,7 +153,7 @@ Routes.post('api/notice/:id',(req,res)=>
     });
 });
 
-Routes.post('api/list-categoria',(req,res)=>
+Routes.post('/api/list-categoria',(req,res)=>
 {
 
     
